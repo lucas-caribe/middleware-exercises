@@ -1,12 +1,12 @@
 const express = require('express');
-const userRouter = express.Router();
-
 const generateToken = require('./utils/generateToken');
 const {
   validateEmail,
   validatePassword,
   validateUsername,
 } = require('./middlewares');
+
+const userRouter = express.Router();
 
 userRouter.post(
   '/register',
